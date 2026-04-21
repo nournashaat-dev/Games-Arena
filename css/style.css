@@ -88,7 +88,7 @@ h2 {
 
 /* Hero Section  */
 .hero-section {
-  background-image: url(../imgs/hero-bg-H6PoyNYD.jpg);
+  background-image: url(../imgs/hero-bg-H6PoyNYD\ \(1\).webp);
   background-size: cover;
   background-attachment: fixed;
   padding-top: 75px;
@@ -295,7 +295,7 @@ h3 {
   opacity: 0;
 }
 
-/*.our-team*/
+/*our-team*/
 .our-team {
   background-color: var(--primary-color);
 }
@@ -310,7 +310,6 @@ h3 {
 .our-team-content {
   img {
     height: 300px;
-    filter: grayscale(100%);
     transition: all 0.8s;
     display: block;
   }
@@ -318,23 +317,20 @@ h3 {
   overflow: hidden;
 }
 
-.our-team-content:hover img {
-  filter: grayscale(0%) brightness(1);
-}
-
 /* LAYER */
 .layer-img {
   inset: 0;
   position: absolute;
-  transition: all 2s;
-  transform: translateY(100%);
-  background-color: #99a1af1a;
-  border-radius: 20px;
-  z-index: 2;
+  width: 100%;
+  height: 101%;
+  backdrop-filter: grayscale(100%) brightness(60%);
+  transition: top 2s ease;
+  background-color: #0000002d;
 }
 
 .our-team-content:hover .layer-img {
-  transform: translateY(0);
+  top: -100%;
+  backdrop-filter: grayscale(0) brightness(60%);
 }
 
 /*OVERLAY CONTENT */
@@ -360,7 +356,7 @@ h3 {
 
 .img-caption h5 {
   font-size: 14px;
-  color: #fff;
+  color: var(--main-color);
 }
 
 .img-caption p {
@@ -379,7 +375,7 @@ h3 {
 
 .p-rotate p {
   font-weight: 700;
-  color: #fff;
+  color: var(--main-color);
   font-size: 18px;
 }
 /*Contact us*/
@@ -552,19 +548,19 @@ h3 {
     margin-left: 20px;
     margin-top: 15px;
   }
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-
-  background-color: transparent;
   overflow: hidden;
+  opacity: 0;
+  position: absolute;
+  bottom: -100%;
+  left: 0;
   width: 100%;
-  height: 0;
-  transition: all 0.5s ease;
+  height: 100%;
+  transition: bottom 0.5s ease;
 }
+
 .games-content:hover .img-games-overlay {
-  height: 20%;
+  opacity: 1;
+  bottom: -80%;
 }
 .img-games-overlay-2 {
   position: absolute;
